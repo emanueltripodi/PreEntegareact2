@@ -1,28 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-//import { Home } from './componentes/Home/Home'
-import { Navbar } from './componentes/navbar/Navbar'
-import { IteamListCointainer } from './componentes/IteamListContainer/IteamListCointainer'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { ItemCounter } from './Componentes/CartWidget/ItemCounter/ItemCounter'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-
-
-
-
-
-
-  
 function App() {
-  const contenidoDeTitulo = "Se vine"
+  const onADD = (cantidad) =>{
+console.log("seleccionaste: "+cantidad);
+  }
   return (
-    <div className='container'>
-      <Navbar/>
-      <IteamListCointainer greeting = 'Saludo app'/>
+  <>
+  <div className='container'>
+<menu />
+<Home greeting="saludo app"/>
+<ItemCounter  initial= {1} stok ={7} onADD= {onADD} />
 
-    </div>
+  </div>
+  </>
   )
 }
+
 
 export default App

@@ -7,6 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+.package.json
+.package-locl.json
+assets
 node_modules
 dist
 dist-ssr
@@ -22,5 +25,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-package.json
-package-locl-json

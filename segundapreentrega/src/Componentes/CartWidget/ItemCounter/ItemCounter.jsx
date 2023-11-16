@@ -1,22 +1,9 @@
-import { useState } from "react"
+import { useCounter } from "../../../hocks/UseCounter"
 
-const useCounter = () => {
-    
-}
+
 export const ItemCounter = (initial=1, stock=7, onADD) => {
-    const [counter, setcounter] = useState(initial)
+    const {counter, handleAdd,handleRemove } = useCounter(initial,stock)
 
-
-    const handleAdd = () => {
-        if (counter < stock){
-            setcounter(counter+1)
-        }
-    }
-    const handleRemove = () => {
-        if (counter > initial){
-        setcounter(counter-1)
-        }
-    }
     const handleOnADD = () => {
         onADD(counter)
     }
